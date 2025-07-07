@@ -40,11 +40,9 @@ const Hero = () => {
 
       <div ref={heroRef} className="relative z-10 text-center px-6 transition-transform duration-100 ease-out">
         <div className="mb-8 animate-fade-in">
-          <img 
-            src="/WhatsApp Image 2025-07-06 at 08.14.10.jpeg" 
-            alt="Underdog Logo" 
-            className="w-32 h-32 mx-auto mb-6 object-contain hover:scale-110 transition-transform duration-300"
-          />
+          <div className="w-32 h-32 mx-auto mb-6 bg-white/10 rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-300">
+            <span className="text-4xl font-black text-white">U</span>
+          </div>
         </div>
 
         <h1 className="text-6xl md:text-8xl lg:text-9xl font-black text-white mb-6 tracking-tighter leading-none">
