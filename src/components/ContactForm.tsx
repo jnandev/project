@@ -15,6 +15,12 @@ const ContactForm = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    // Basic client-side validation
+    if (!formData.name.trim() || !formData.email.trim() || !formData.businessType || !formData.message.trim()) {
+      return;
+    }
+    
     await submit(formData);
     
     if (status === 'success') {
@@ -42,6 +48,11 @@ const ContactForm = () => {
 
   return (
     <div className="bg-gray-800/50 backdrop-blur-sm border border-gray-700/50 rounded-2xl p-8">
+      <div className="mb-6">
+        <h3 className="text-2xl font-bold text-white mb-2">Get Started Today</h3>
+        <p className="text-gray-300">Tell us about your business and marketing goals</p>
+      </div>
+      
       <form onSubmit={handleSubmit} className="space-y-6">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div>
@@ -55,6 +66,7 @@ const ContactForm = () => {
               required
               value={formData.name}
               onChange={handleChange}
+              disabled={status === 'loading'}
               className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors duration-300"
               placeholder="Your name"
             />
@@ -71,6 +83,7 @@ const ContactForm = () => {
               required
               value={formData.email}
               onChange={handleChange}
+              disabled={status === 'loading'}
               className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors duration-300"
               placeholder="your@email.com"
             />
@@ -87,6 +100,7 @@ const ContactForm = () => {
             name="company"
             value={formData.company}
             onChange={handleChange}
+            disabled={status === 'loading'}
             className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors duration-300"
             placeholder="Your business name"
           />
@@ -102,6 +116,7 @@ const ContactForm = () => {
             required
             value={formData.businessType}
             onChange={handleChange}
+            disabled={status === 'loading'}
             className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white focus:outline-none focus:border-gray-400 transition-colors duration-300"
           >
             <option value="">Select your business type</option>
@@ -110,6 +125,11 @@ const ContactForm = () => {
             <option value="real-estate">Real Estate/Property</option>
             <option value="restaurant">Restaurant/Food Service</option>
             <option value="service-business">Service Business</option>
+            <option value="fitness">Fitness/Health</option>
+            <option value="beauty">Beauty/Wellness</option>
+            <option value="technology">Technology/Software</option>
+            <option value="education">Education/Training</option>
+            <option value="healthcare">Healthcare</option>
             <option value="other">Other</option>
           </select>
         </div>
@@ -125,6 +145,7 @@ const ContactForm = () => {
             rows={6}
             value={formData.message}
             onChange={handleChange}
+            disabled={status === 'loading'}
             className="w-full px-4 py-3 bg-gray-700/50 border border-gray-600 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors duration-300 resize-none"
             placeholder="Describe your business, current challenges, and what you'd like to achieve..."
           ></textarea>
@@ -157,6 +178,10 @@ const ContactForm = () => {
             <Send className="w-5 h-5 group-hover:translate-x-1 transition-transform duration-300" />
           )}
         </button>
+        
+        <p className="text-gray-400 text-sm text-center">
+          We'll respond within 24 hours with a custom strategy for your business.
+        </p>
       </form>
     </div>
   );

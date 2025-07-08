@@ -14,13 +14,19 @@ export const useContactForm = () => {
       if (result.success) {
         setStatus('success');
         setMessage(result.message);
+        
+        // Reset status after 10 seconds for success
+        setTimeout(() => {
+          setStatus('idle');
+          setMessage('');
+        }, 10000);
       } else {
         setStatus('error');
         setMessage(result.message);
       }
     } catch (error) {
       setStatus('error');
-      setMessage('Something went wrong. Please try again.');
+      setMessage('Network error. Please check your connection and try again.');
     }
   };
 

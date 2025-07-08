@@ -17,6 +17,9 @@ const Header = () => {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
+    // Close mobile menu when navigating
+    setIsMenuOpen(false);
+    
     if (location.pathname !== '/') {
       window.location.href = `/#${sectionId}`;
       return;
@@ -24,7 +27,6 @@ const Header = () => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
-      setIsMenuOpen(false);
     }
   };
 

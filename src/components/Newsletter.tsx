@@ -9,6 +9,13 @@ const Newsletter = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    
+    if (!email.trim()) {
+      setStatus('error');
+      setMessage('Please enter your email address.');
+      return;
+    }
+    
     setStatus('loading');
 
     const result = await subscribeToNewsletter({ email });
@@ -17,12 +24,25 @@ const Newsletter = () => {
       setStatus('success');
       setMessage(result.message);
       setEmail('');
+      
+      // Reset status after 5 seconds
+      setTimeout(() => {
+        setStatus('idle');
+        setMessage('');
+      }, 5000);
     } else {
       setStatus('error');
       setMessage(result.message);
     }
   };
 
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(e.target.value);
+    if (status !== 'idle') {
+      setStatus('idle');
+      setMessage('');
+    }
+  };
   return (
     <section id="newsletter" className="py-16 bg-gradient-to-r from-gray-900 to-black">
       <div className="max-w-4xl mx-auto px-6 lg:px-8 text-center">
@@ -40,9 +60,10 @@ const Newsletter = () => {
               <input
                 type="email"
                 value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                onChange={handleEmailChange}
                 placeholder="Enter your email"
                 required
+                disabled={status === 'loading'}
                 className="flex-1 px-6 py-4 bg-gray-700/50 border border-gray-600 rounded-full text-white placeholder-gray-400 focus:outline-none focus:border-gray-400 transition-colors duration-300"
               />
               <button
@@ -70,8 +91,23 @@ const Newsletter = () => {
           </form>
           
           <p className="text-gray-400 text-sm mt-4">
-            No spam, unsubscribe at any time. We respect your privacy.
+            Join 10,000+ marketers. No spam, unsubscribe at any time. We respect your privacy.
           </p>
+          
+          <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm text-gray-400">
+            <div>
+              <div className="text-white font-semibold mb-1">Weekly Insights</div>
+              <div>Latest marketing trends & strategies</div>
+            </div>
+            <div>
+              <div className="text-white font-semibold mb-1">Case Studies</div>
+              <div>Real business transformations</div>
+            </div>
+            <div>
+              <div className="text-white font-semibold mb-1">Free Resources</div>
+              <div>Templates, guides & tools</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>

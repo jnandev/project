@@ -2,6 +2,7 @@ const express = require('express');
 const cors = require('cors');
 const nodemailer = require('nodemailer');
 const rateLimit = require('express-rate-limit');
+const path = require('path');
 require('dotenv').config();
 
 const app = express();
@@ -13,6 +14,7 @@ app.use(cors({
   credentials: true
 }));
 app.use(express.json());
+app.use(express.static(path.join(__dirname, '../dist')));
 
 // Rate limiting
 const limiter = rateLimit({
@@ -24,13 +26,19 @@ const limiter = rateLimit({
 app.use('/api/', limiter);
 
 // Email transporter setup
-const transporter = nodemailer.createTransporter({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
-  }
-});
+let transporter;
+
+try {
+  transporter = nodemailer.createTransporter({
+    service: 'gmail',
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS
+    }
+  });
+} catch (error) {
+  console.warn('Email configuration not set up. Contact forms will log to console.');
+}
 
 // Contact form endpoint
 app.post('/api/contact', async (req, res) => {
@@ -54,6 +62,23 @@ app.post('/api/contact', async (req, res) => {
       });
     }
 
+    // If no email transporter, log to console (for development)
+    if (!transporter) {
+      console.log('Contact Form Submission:', {
+        name,
+        email,
+        company: company || 'Not provided',
+        businessType,
+        message,
+        timestamp: new Date().toISOString()
+      });
+      
+      return res.json({
+        success: true,
+        message: 'Thank you for your message! We\'ll get back to you within 24 hours.'
+      });
+    }
+
     // Send email to company
     const companyMailOptions = {
       from: process.env.EMAIL_USER,
@@ -67,6 +92,7 @@ app.post('/api/contact', async (req, res) => {
         <p><strong>Business Type:</strong> ${businessType}</p>
         <p><strong>Message:</strong></p>
         <p>${message}</p>
+        <p><strong>Submitted:</strong> ${new Date().toLocaleString()}</p>
       `
     };
 
@@ -80,6 +106,11 @@ app.post('/api/contact', async (req, res) => {
         <p>Hi ${name},</p>
         <p>We've received your message and will get back to you within 24 hours.</p>
         <p>In the meantime, feel free to check out our case studies and free resources on our website.</p>
+        <p>Your inquiry details:</p>
+        <ul>
+          <li><strong>Business Type:</strong> ${businessType}</li>
+          <li><strong>Company:</strong> ${company || 'Not provided'}</li>
+        </ul>
         <p>Best regards,<br>The Underdog Team</p>
       `
     };
@@ -123,6 +154,19 @@ app.post('/api/newsletter', async (req, res) => {
       });
     }
 
+    // If no email transporter, log to console (for development)
+    if (!transporter) {
+      console.log('Newsletter Subscription:', {
+        email,
+        timestamp: new Date().toISOString()
+      });
+      
+      return res.json({
+        success: true,
+        message: 'Thanks for subscribing! Check your email for confirmation.'
+      });
+    }
+
     // Send notification to company
     const companyMailOptions = {
       from: process.env.EMAIL_USER,
@@ -150,6 +194,7 @@ app.post('/api/newsletter', async (req, res) => {
           <li>E-commerce Conversion Optimization Checklist</li>
           <li>Social Media Content Calendar Template</li>
         </ul>
+        <p>Stay tuned for valuable insights delivered to your inbox!</p>
         <p>Best regards,<br>The Underdog Team</p>
       `
     };
@@ -173,9 +218,21 @@ app.post('/api/newsletter', async (req, res) => {
 
 // Health check endpoint
 app.get('/api/health', (req, res) => {
-  res.json({ status: 'OK', timestamp: new Date().toISOString() });
+  res.json({ 
+    status: 'OK', 
+    timestamp: new Date().toISOString(),
+    environment: process.env.NODE_ENV || 'development',
+    emailConfigured: !!transporter
+  });
+});
+
+// Serve React app for all non-API routes (for production)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
+  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
+  console.log(`Email configured: ${!!transporter}`);
 });
