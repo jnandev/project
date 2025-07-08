@@ -83,8 +83,8 @@ const About = () => {
               <div className="text-gray-300 font-medium">Businesses Transformed</div>
             </div>
             <div>
-              <div className="text-4xl md:text-5xl font-black text-white mb-2">$50M+</div>
-              <div className="text-gray-300 font-medium">Revenue Generated</div>
+              <div className="text-4xl md:text-5xl font-black text-white mb-2">2M+</div>
+              <div className="text-gray-300 font-medium">Customers Reached</div>
             </div>
             <div>
               <div className="text-4xl md:text-5xl font-black text-white mb-2">450%</div>

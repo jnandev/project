@@ -3,7 +3,7 @@ import { ChevronLeft, ChevronRight, Star, Quote } from 'lucide-react';
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
+    name: "Priya Sharma",
     role: "Retail Store Owner",
     company: "Bloom Boutique",
     image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400",
@@ -12,16 +12,16 @@ const testimonials = [
     results: "400% increase in foot traffic"
   },
   {
-    name: "Marcus Chen",
+    name: "Arjun Patel",
     role: "E-commerce Founder",
     company: "TechGear Pro",
     image: "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=400",
-    content: "From zero to $2.5M in revenue in just 18 months. Their e-commerce strategy and execution is absolutely phenomenal. Best investment we ever made.",
+    content: "From zero to 15,000 orders per month in just 18 months. Their e-commerce strategy and execution is absolutely phenomenal. Best investment we ever made.",
     rating: 5,
-    results: "$2.5M revenue in 18 months"
+    results: "15K monthly orders in 18 months"
   },
   {
-    name: "Elena Rodriguez",
+    name: "Kavya Reddy",
     role: "Real Estate Agent",
     company: "Premium Properties",
     image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400",
@@ -30,7 +30,7 @@ const testimonials = [
     results: "75% faster sales"
   },
   {
-    name: "David Park",
+    name: "Rohit Gupta",
     role: "Restaurant Owner",
     company: "Urban Eats",
     image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400",
@@ -39,7 +39,7 @@ const testimonials = [
     results: "Fully booked every night"
   },
   {
-    name: "Lisa Thompson",
+    name: "Sneha Joshi",
     role: "Fitness Studio Owner",
     company: "FitLife Studio",
     image: "https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg?auto=compress&cs=tinysrgb&w=400",

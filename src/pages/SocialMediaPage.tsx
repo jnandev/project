@@ -219,7 +219,7 @@ const SocialMediaPage = () => {
             <div className="bg-gradient-to-br from-pink-900/30 to-red-900/30 border border-pink-500/30 rounded-3xl p-8 text-center">
               <div className="text-4xl font-black mb-2 text-pink-400">The Viral Hit</div>
               <div className="text-gray-300 mb-4">2.3M Views</div>
-              <p className="text-sm text-gray-400">"Single post generated $47K in sales"</p>
+              <p className="text-sm text-gray-400">"Single post generated 1,200 orders"</p>
             </div>
             <div className="bg-gradient-to-br from-red-900/30 to-orange-900/30 border border-red-500/30 rounded-3xl p-8 text-center">
               <div className="text-4xl font-black mb-2 text-red-400">The Community</div>

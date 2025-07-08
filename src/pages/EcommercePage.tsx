@@ -70,7 +70,7 @@ const EcommercePage = () => {
                   </div>
                   <div className="flex items-center justify-between">
                     <span className="text-gray-300">Revenue Per Visitor</span>
-                    <span className="text-3xl font-bold text-blue-400">$47</span>
+                    <span className="text-3xl font-bold text-blue-400">₹3,900</span>
                   </div>
                 </div>
               </div>
@@ -217,8 +217,8 @@ const EcommercePage = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-3xl p-8 text-center">
-              <div className="text-4xl font-black mb-2 text-blue-400">The Viral Launch</div>
-              <div className="text-gray-300 mb-4">0 to 100K in 30 Days</div>
+              <div className="text-4xl font-black mb-2 text-blue-400">The Order Surge</div>
+              <div className="text-gray-300 mb-4">0 to 5K Orders in 30 Days</div>
               <p className="text-sm text-gray-400">"Sold out entire inventory in first month"</p>
             </div>
             <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-3xl p-8 text-center">
@@ -227,9 +227,9 @@ const EcommercePage = () => {
               <p className="text-sm text-gray-400">"Highest conversion rate in our industry"</p>
             </div>
             <div className="bg-gradient-to-br from-pink-900/30 to-red-900/30 border border-pink-500/30 rounded-3xl p-8 text-center">
-              <div className="text-4xl font-black mb-2 text-pink-400">The Empire Builder</div>
-              <div className="text-gray-300 mb-4">7-Figure in Year 1</div>
-              <p className="text-sm text-gray-400">"Built a million-dollar business from scratch"</p>
+              <div className="text-4xl font-black mb-2 text-pink-400">The Scale Master</div>
+              <div className="text-gray-300 mb-4">15K Orders/Month</div>
+              <p className="text-sm text-gray-400">"Built a thriving business from scratch"</p>
             </div>
           </div>
         </div>

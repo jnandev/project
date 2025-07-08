@@ -219,12 +219,12 @@ const DigitalAdvertisingPage = () => {
             <div className="bg-gradient-to-br from-green-900/30 to-blue-900/30 border border-green-500/30 rounded-3xl p-8 text-center">
               <div className="text-4xl font-black mb-2 text-green-400">The ROI King</div>
               <div className="text-gray-300 mb-4">12.8x Return</div>
-              <p className="text-sm text-gray-400">"Every $1 spent returned $12.80"</p>
+              <p className="text-sm text-gray-400">"Every ₹100 spent returned ₹1,280"</p>
             </div>
             <div className="bg-gradient-to-br from-blue-900/30 to-purple-900/30 border border-blue-500/30 rounded-3xl p-8 text-center">
               <div className="text-4xl font-black mb-2 text-blue-400">The Scale Master</div>
-              <div className="text-gray-300 mb-4">500% Budget Increase</div>
-              <p className="text-sm text-gray-400">"Scaled from $1K to $5K daily spend profitably"</p>
+              <div className="text-gray-300 mb-4">5x Budget Scale</div>
+              <p className="text-sm text-gray-400">"Scaled from ₹10K to ₹50K daily spend profitably"</p>
             </div>
             <div className="bg-gradient-to-br from-purple-900/30 to-pink-900/30 border border-purple-500/30 rounded-3xl p-8 text-center">
               <div className="text-4xl font-black mb-2 text-purple-400">The Conversion</div>

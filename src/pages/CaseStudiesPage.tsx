@@ -15,29 +15,29 @@ const caseStudies = [
       footTraffic: "400%",
       sales: "350%",
       timeframe: "6 months",
-      roi: "850%"
+      roi: "8.5x growth"
     },
     image: "https://images.pexels.com/photos/1884581/pexels-photo-1884581.jpeg?auto=compress&cs=tinysrgb&w=800",
     testimonial: "Underdog didn't just market our store - they transformed our entire business. We went from struggling to thriving.",
-    clientName: "Sarah Johnson, Owner"
+    clientName: "Priya Sharma, Owner"
   },
   {
     id: 2,
-    title: "Zero to $2.5M: E-commerce Success Story",
+    title: "Zero to 15K Orders: E-commerce Success Story",
     category: "E-commerce",
     client: "TechGear Pro",
     industry: "Electronics",
     challenge: "New e-commerce startup with no brand recognition or sales",
     solution: "Complete digital strategy including website optimization, SEO, paid advertising, and conversion funnels",
     results: {
-      revenue: "$2.5M",
+      orders: "15K/month",
       customers: "15,000",
       timeframe: "18 months",
-      roi: "1,200%"
+      roi: "12x growth"
     },
     image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
-    testimonial: "From idea to multi-million dollar business in 18 months. Their strategy and execution is phenomenal.",
-    clientName: "Marcus Chen, Founder"
+    testimonial: "From idea to 15K monthly orders in 18 months. Their strategy and execution is phenomenal.",
+    clientName: "Arjun Patel, Founder"
   },
   {
     id: 3,
@@ -51,11 +51,11 @@ const caseStudies = [
       salesSpeed: "75% faster",
       priceIncrease: "15%",
       timeframe: "12 months",
-      roi: "600%"
+      roi: "6x growth"
     },
     image: "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=800",
     testimonial: "My listings now sell faster and for higher prices than any other agent in the area.",
-    clientName: "Elena Rodriguez, Agent"
+    clientName: "Kavya Reddy, Agent"
   },
   {
     id: 4,
@@ -69,11 +69,11 @@ const caseStudies = [
       bookings: "100% capacity",
       socialFollowing: "500%",
       timeframe: "8 months",
-      roi: "450%"
+      roi: "4.5x growth"
     },
     image: "https://images.pexels.com/photos/1581384/pexels-photo-1581384.jpeg?auto=compress&cs=tinysrgb&w=800",
     testimonial: "We went from empty tables to fully booked every night. The transformation has been incredible.",
-    clientName: "David Park, Owner"
+    clientName: "Rohit Gupta, Owner"
   },
   {
     id: 5,
@@ -87,29 +87,29 @@ const caseStudies = [
       members: "1,000%",
       retention: "95%",
       timeframe: "10 months",
-      roi: "750%"
+      roi: "7.5x growth"
     },
     image: "https://images.pexels.com/photos/1552252/pexels-photo-1552252.jpeg?auto=compress&cs=tinysrgb&w=800",
     testimonial: "From 50 to 500 members in less than a year. We're now the premier fitness destination in town.",
-    clientName: "Lisa Thompson, Owner"
+    clientName: "Sneha Joshi, Owner"
   },
   {
     id: 6,
-    title: "SaaS Startup: $10M Valuation in 2 Years",
+    title: "SaaS Startup: 2,500 Customers in 2 Years",
     category: "B2B Marketing",
     client: "CloudSync Solutions",
     industry: "Software",
     challenge: "B2B SaaS startup needing to establish market presence and generate leads",
     solution: "Content marketing, LinkedIn strategy, and lead generation funnels",
     results: {
-      valuation: "$10M",
+      valuation: "Series A Funded",
       customers: "2,500",
       timeframe: "24 months",
-      roi: "2,000%"
+      roi: "20x growth"
     },
     image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800",
-    testimonial: "Their B2B marketing strategy helped us achieve a $10M valuation and secure Series A funding.",
-    clientName: "Alex Kim, CEO"
+    testimonial: "Their B2B marketing strategy helped us secure Series A funding and reach 2,500 customers.",
+    clientName: "Rahul Verma, CEO"
   }
 ];
 

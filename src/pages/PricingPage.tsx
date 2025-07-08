@@ -13,8 +13,8 @@ const PricingPage = () => {
     {
       name: "Starter",
       description: "Perfect for small businesses just getting started",
-      monthlyPrice: 2999,
-      annualPrice: 29990,
+      monthlyPrice: 25000,
+      annualPrice: 250000,
       features: [
         "Brand audit & strategy",
         "Basic website optimization",
@@ -29,8 +29,8 @@ const PricingPage = () => {
     {
       name: "Growth",
       description: "Ideal for businesses ready to scale",
-      monthlyPrice: 5999,
-      annualPrice: 59990,
+      monthlyPrice: 50000,
+      annualPrice: 500000,
       features: [
         "Everything in Starter",
         "Multi-channel marketing strategy",
@@ -47,8 +47,8 @@ const PricingPage = () => {
     {
       name: "Enterprise",
       description: "For established businesses seeking market dominance",
-      monthlyPrice: 12999,
-      annualPrice: 129990,
+      monthlyPrice: 100000,
+      annualPrice: 1000000,
       features: [
         "Everything in Growth",
         "Custom marketing strategy",
@@ -69,22 +69,22 @@ const PricingPage = () => {
     {
       name: "Professional Photography",
       description: "High-quality product and lifestyle photography",
-      price: 1500
+      price: 15000
     },
     {
       name: "Video Production",
       description: "Professional video content for marketing campaigns",
-      price: 3000
+      price: 30000
     },
     {
       name: "Influencer Marketing",
       description: "Managed influencer partnerships and campaigns",
-      price: 2500
+      price: 25000
     },
     {
       name: "Advanced Analytics",
       description: "Custom dashboards and detailed performance tracking",
-      price: 800
+      price: 8000
     }
   ];
 
@@ -163,14 +163,14 @@ const PricingPage = () => {
                   
                   <div className="mb-6">
                     <span className="text-5xl font-black">
-                      ${billingCycle === 'monthly' 
-                        ? (plan.monthlyPrice / 100).toLocaleString() 
-                        : (plan.annualPrice / 100 / 12).toLocaleString()}
+                      ₹{billingCycle === 'monthly' 
+                        ? (plan.monthlyPrice).toLocaleString() 
+                        : (plan.annualPrice / 12).toLocaleString()}
                     </span>
                     <span className="text-gray-400 ml-2">/month</span>
                     {billingCycle === 'annual' && (
                       <div className="text-sm text-gray-400 mt-1">
-                        Billed annually (${(plan.annualPrice / 100).toLocaleString()})
+                        Billed annually (₹{(plan.annualPrice).toLocaleString()})
                       </div>
                     )}
                   </div>
@@ -210,7 +210,7 @@ const PricingPage = () => {
                     <p className="text-gray-400 text-sm">{addon.description}</p>
                   </div>
                   <div className="text-right">
-                    <div className="text-2xl font-bold">${addon.price}</div>
+                    <div className="text-2xl font-bold">₹{addon.price.toLocaleString()}</div>
                     <div className="text-gray-400 text-sm">one-time</div>
                   </div>
                 </div>

@@ -9,7 +9,7 @@ const AboutPage = () => {
 
   const stats = [
     { icon: <Store className="w-8 h-8" />, number: "500+", label: "Businesses Transformed" },
-    { icon: <Globe className="w-8 h-8" />, number: "$50M+", label: "Revenue Generated" },
+    { icon: <Globe className="w-8 h-8" />, number: "2M+", label: "Customers Reached" },
     { icon: <Users className="w-8 h-8" />, number: "98%", label: "Client Satisfaction" },
     { icon: <TrendingUp className="w-8 h-8" />, number: "450%", label: "Average Growth" }
   ];
@@ -34,45 +34,45 @@ const AboutPage = () => {
 
   const team = [
     {
-      name: "Sarah Chen",
+      name: "Ananya Sharma",
       role: "Founder & CEO",
       image: "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=400",
-      bio: "Former Fortune 500 marketing executive with 15+ years of experience. Sarah founded Underdog to help small businesses compete with enterprise-level marketing strategies.",
+      bio: "Former Fortune 500 marketing executive with 15+ years of experience. Ananya founded Underdog to help small businesses compete with enterprise-level marketing strategies.",
       expertise: ["Strategic Planning", "Retail Marketing", "Team Leadership"]
     },
     {
-      name: "Marcus Rodriguez",
+      name: "Vikram Singh",
       role: "Head of Digital Strategy",
       image: "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=400",
-      bio: "E-commerce specialist who has launched 200+ successful online stores. Marcus brings deep technical expertise and conversion optimization mastery.",
+      bio: "E-commerce specialist who has launched 200+ successful online stores. Vikram brings deep technical expertise and conversion optimization mastery.",
       expertise: ["E-commerce", "Conversion Optimization", "Technical SEO"]
     },
     {
-      name: "Elena Kowalski",
+      name: "Meera Kapoor",
       role: "Creative Director",
       image: "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=400",
-      bio: "Award-winning designer and brand strategist. Elena creates visual identities that not only look stunning but drive customer action and loyalty.",
+      bio: "Award-winning designer and brand strategist. Meera creates visual identities that not only look stunning but drive customer action and loyalty.",
       expertise: ["Brand Design", "Visual Strategy", "Creative Direction"]
     },
     {
-      name: "David Kim",
+      name: "Karan Mehta",
       role: "Performance Marketing Lead",
       image: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400",
-      bio: "Data-driven marketer who has managed over $10M in ad spend. David specializes in scaling profitable advertising campaigns across all platforms.",
+      bio: "Data-driven marketer who has managed campaigns reaching 10M+ customers. Karan specializes in scaling profitable advertising campaigns across all platforms.",
       expertise: ["Paid Advertising", "Analytics", "Performance Marketing"]
     },
     {
-      name: "Lisa Park",
+      name: "Riya Agarwal",
       role: "Content & Social Media Director",
       image: "https://images.pexels.com/photos/3184639/pexels-photo-3184639.jpeg?auto=compress&cs=tinysrgb&w=400",
-      bio: "Content strategist and social media expert who has built communities of millions. Lisa creates content that engages, educates, and converts.",
+      bio: "Content strategist and social media expert who has built communities of millions. Riya creates content that engages, educates, and converts.",
       expertise: ["Content Strategy", "Social Media", "Community Building"]
     },
     {
-      name: "Alex Thompson",
+      name: "Aryan Kumar",
       role: "Client Success Manager",
       image: "https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=400",
-      bio: "Customer success specialist dedicated to ensuring every client achieves their goals. Alex provides ongoing support and strategic guidance.",
+      bio: "Customer success specialist dedicated to ensuring every client achieves their goals. Aryan provides ongoing support and strategic guidance.",
       expertise: ["Client Relations", "Project Management", "Strategic Consulting"]
     }
   ];

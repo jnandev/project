@@ -21,10 +21,10 @@ const workItems = [
     category: "E-commerce",
     description: "Built a multi-million dollar online business from zero to market leader",
     image: "https://images.pexels.com/photos/265087/pexels-photo-265087.jpeg?auto=compress&cs=tinysrgb&w=800",
-    results: "$2.5M revenue in 18 months",
+    results: "15K monthly orders in 18 months",
     metrics: {
-      before: "$0 revenue",
-      after: "$2.5M revenue",
+      before: "0 orders/month",
+      after: "15K orders/month",
       timeframe: "18 months"
     }
   },
