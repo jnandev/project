@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown, ArrowRight } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Header = () => {
@@ -65,24 +65,28 @@ const Header = () => {
               onMouseEnter={() => setIsServicesOpen(true)}
               onMouseLeave={() => setIsServicesOpen(false)}
             >
-              <button className="text-white/80 hover:text-white transition-colors duration-300 text-sm font-medium tracking-wide uppercase flex items-center space-x-1">
+              <button className="text-white/80 hover:text-white transition-colors duration-300 text-sm font-medium tracking-wide uppercase flex items-center space-x-1 group">
                 <span>Services</span>
-                <ChevronDown className={`w-4 h-4 transition-transform duration-300 ${isServicesOpen ? 'rotate-180' : ''}`} />
+                <ChevronDown className={`w-4 h-4 transition-transform duration-300 group-hover:rotate-180 ${isServicesOpen ? 'rotate-180' : ''}`} />
               </button>
               
-              <div className={`absolute top-full left-0 mt-2 w-80 bg-black/95 backdrop-blur-lg border border-gray-700 rounded-2xl shadow-2xl transition-all duration-300 ${
+              <div className={`absolute top-full left-0 mt-2 w-96 bg-black/95 backdrop-blur-lg border border-gray-700 rounded-2xl shadow-2xl transition-all duration-300 ${
                 isServicesOpen ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible -translate-y-2'
               }`}>
-                <div className="p-6 space-y-3">
+                <div className="p-6">
+                  <div className="text-gray-400 text-xs uppercase tracking-wider mb-4 font-semibold">Our Strategies</div>
+                  <div className="space-y-3">
                   {services.map((service, index) => (
                     <Link
                       key={index}
                       to={service.path}
-                      className="block text-gray-300 hover:text-white transition-colors duration-300 text-sm py-2 px-3 rounded-lg hover:bg-gray-800/50"
+                      className="group flex items-center text-gray-300 hover:text-white transition-all duration-300 text-sm py-3 px-4 rounded-lg hover:bg-gray-800/50 border border-transparent hover:border-gray-600"
                     >
-                      {service.name}
+                      <span className="flex-1">{service.name}</span>
+                      <ArrowRight className="w-4 h-4 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300" />
                     </Link>
                   ))}
+                  </div>
                 </div>
               </div>
             </div>

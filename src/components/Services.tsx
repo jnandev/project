@@ -102,20 +102,39 @@ const Services = () => {
         <div className="mt-20 text-center">
           <div className="bg-gradient-to-r from-gray-800 to-gray-900 border border-gray-700 rounded-3xl p-12">
             <h3 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Why Choose Underdog for Your Marketing?
+              Our Strategic Marketing Approach
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
+            <p className="text-xl text-gray-300 mb-12 max-w-4xl mx-auto">
+              Every strategy we implement follows our proven methodology that has transformed over 500 businesses
+            </p>
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
               <div>
-                <div className="text-2xl font-bold text-white mb-2">Multi-Channel Expertise</div>
-                <p className="text-gray-300">From physical stores to online platforms and real estate markets</p>
+                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">1</span>
+                </div>
+                <div className="text-xl font-bold text-white mb-2">Analyze</div>
+                <p className="text-gray-300 text-sm">Deep dive into your business, market, and competition</p>
               </div>
               <div>
-                <div className="text-2xl font-bold text-white mb-2">Proven Results</div>
-                <p className="text-gray-300">Average 500% increase in sales and brand visibility</p>
+                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">2</span>
+                </div>
+                <div className="text-xl font-bold text-white mb-2">Strategize</div>
+                <p className="text-gray-300 text-sm">Develop custom marketing strategies for your goals</p>
               </div>
               <div>
-                <div className="text-2xl font-bold text-white mb-2">Full-Service Support</div>
-                <p className="text-gray-300">End-to-end marketing solutions with dedicated account management</p>
+                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">3</span>
+                </div>
+                <div className="text-xl font-bold text-white mb-2">Execute</div>
+                <p className="text-gray-300 text-sm">Implement campaigns with precision and expertise</p>
+              </div>
+              <div>
+                <div className="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-2xl font-bold text-white">4</span>
+                </div>
+                <div className="text-xl font-bold text-white mb-2">Optimize</div>
+                <p className="text-gray-300 text-sm">Continuously improve for maximum ROI</p>
               </div>
             </div>
           </div>
