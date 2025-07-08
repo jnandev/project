@@ -5,6 +5,7 @@ import Hero from './components/Hero';
 import Services from './components/Services';
 import Work from './components/Work';
 import About from './components/About';
+import About from './components/About';
 import Testimonials from './components/Testimonials';
 import Newsletter from './components/Newsletter';
 import Contact from './components/Contact';
@@ -17,6 +18,8 @@ import RealEstateMarketingPage from './pages/RealEstateMarketingPage';
 import BrandDevelopmentPage from './pages/BrandDevelopmentPage';
 import DigitalAdvertisingPage from './pages/DigitalAdvertisingPage';
 import SocialMediaPage from './pages/SocialMediaPage';
+import BrandDevelopmentPage from './pages/BrandDevelopmentPage';
+import DigitalAdvertisingPage from './pages/DigitalAdvertisingPage';
 
 // Additional Pages
 import CaseStudiesPage from './pages/CaseStudiesPage';
@@ -31,6 +34,7 @@ function HomePage() {
       <Hero />
       <Services />
       <Work />
+      <About />
       <Testimonials />
       <About />
       <Newsletter />
